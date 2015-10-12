@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+    <div class="container">
+        <!-- Edit a City's Information -->
+        <div class="row">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center" style="color:#FFF">
+                    <strong>Edit a City's Information in the Database</strong></h2>
+                <hr>
+            </div>
+            <div style="color:#FFF" 
+                 class="col-lg-6 col-lg-offset-3 
+                        col-md-6 col-md-offset-3 
+                        col-sm-8 col-sm-offset-2
+                        col-xs-12 col-sm-offset-0
+                       "
+            >
+                <!-- from CityEditForm in forms.py;
+                     from city_edit in views.py -->
+                {% crispy form_city_edit_v %}
+            </div>
+        </div>
+
+{% endblock body %}

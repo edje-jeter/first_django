@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">States
+                        <strong>List</strong>
+                    </h2>
+                    <hr>
+                </div>
+
+                {% for state in states %}
+                <div class="col-lg-12 text-center">
+                    {% comment %}
+                    <img class="img-responsive img-border img-full" src="{% static 'img/slide-1.jpg' %}" alt="">
+                    {% endcomment %}
+                    <h2>{{ state.name }}
+                        <br>
+                        <small>{{ state.statecapital }}</small>
+                    </h2>
+                    <p>
+                        {% for city in state.city_set.all|slice:":30" %}
+                            <a href="/city_detail/{{ city.pk }}">{{ city }}</a>
+                        {% endfor %}
+                    </p>
+                    <a href="/state_detail/{{ state.pk }}" class="btn btn-default btn-lg">Read More</a>
+                    <hr>
+                </div>
+                {% endfor %}
+
+
+                {% comment %}
+                <div class="col-lg-12 text-center">
+                    <ul class="pager">
+                        <li class="previous"><a href="#">&larr; Older</a>
+                        </li>
+                        <li class="next"><a href="#">Newer &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+                {% endcomment %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+<h2>This is a list</h2>
+{{ states }}</br>
+
+</br>
+
+<h2>This is looping though the list</h2>
+{% for state in states %}
+    <a href="/state_detail/{{ state.pk }}/">{{ state }}</a>
+    {{ state.pk }}
+    {{ state.abbrev }}
+    </br>
+{% endfor %}

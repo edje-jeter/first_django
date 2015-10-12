@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+    <div class="container">
+        <!-- Log in existing users -->
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-1 
+                        col-md-5 col-md-offset-1 
+                        col-sm-8 col-sm-offset-2
+                        col-xs-12 col-sm-offset-0
+                       "
+                 style="color:#FFF" 
+            >
+                <hr>
+                <h2 class="intro-text text-center" style="color:#FFF">
+                    <strong>Existing Users Log In</strong></h2>
+                <hr>
+
+                {% if login_fail %}
+                    <h4> {{ login_fail }} </h4>
+                {% endif %}
+
+                <!-- from UserLogin in forms.py;
+                     from signup in views.py -->
+                    {% crispy form_login %}
+                </br>
+            </div>
+
+            <!-- Sign up new users -->
+            <div class="col-lg-4 col-lg-offset-1 
+                        col-md-5 col-md-offset-1 
+                        col-sm-8 col-sm-offset-2
+                        col-xs-12 col-sm-offset-0
+                       "
+                 style="color:#FFF" 
+            >
+                <hr>
+                <h2 class="intro-text text-center" style="color:#FFF">
+                    <strong>New Users Sign Up</strong></h2>
+                <hr>
+
+                <!-- from UserSignUp in forms.py;
+                     from signup in views.py -->
+                    {% crispy form_signup %}
+                </br>
+            </div>
+        </div>
+
+{% endblock body %}

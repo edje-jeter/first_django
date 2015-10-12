@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block body %}
+
+<div class="container">
+        
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                        <h2 class="intro-text text-center">
+                            List of Cities Matching: <strong>{{ search_term }}</strong>
+                        </h2>
+                    <hr>
+                </div>
+                <div id="search-list" class="col-lg-12">
+                    {% if cities %}
+                        {% for city in cities %}
+                            <a href="/city_detail/{{city.pk}}/">{{ city.name }}, {{ city.abbrev }} {{ city.zipc }}</a></br>
+                        {% endfor %}
+                    {% else %}
+                        <div style="background-color: #FF0000; opacity: 50%">
+                            <h2 class="intro-text text-center">
+                                No city matched the search term [ {{ search_term }} ].
+                            </h2>
+                        </div>
+                    {% endif %}
+                    <br>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock body %}

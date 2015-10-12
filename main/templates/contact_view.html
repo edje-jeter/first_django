@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    
+    <div class="container">
+        <div class="row">x
+            <div class="col-lg-10 col-lg-offset-1
+                        col-md-12
+                        col-sm-11
+                        col-xs-12" 
+                 style="color:#FFF;"
+                >
+                {% crispy form %}
+            </div>
+        </div>
+
+        <p>{{ message_success }}</p>
+    </div>
+
+{% endblock body %}

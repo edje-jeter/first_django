@@ -1,0 +1,30 @@
+.block {
+    border-style: solid;
+    border-width: medium;
+    border-color: white;
+}
+
+.lightpink {
+    background-color: #F5C6D6;
+    height: 10vh;
+}
+
+.brightpink {
+    background-color: #EE2E84;
+    height: 10vh;
+}
+
+.blue {
+    background-color: #85CFD8;
+    height: 10vh;
+}
+
+.green {
+    background-color: #8DC63F;
+    height: 10vh;
+}
+
+.orange {
+    background-color: #E76E34;
+    height: 10vh;
+}

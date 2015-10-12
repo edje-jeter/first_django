@@ -1,0 +1,65 @@
+body {
+    font-family: mario;
+}
+
+@font-face {
+    font-family: mario;
+    src: url(SuperMario256.ttf);
+}
+
+h1 {
+    font: mario;
+    color: #E71F21;
+    font-size: 350%;
+}
+
+h3 {
+   color: #E71F21; 
+   text-align: center;
+}
+
+p {
+    color: #E71F21;
+    text-align: center;
+}
+
+img.luigi {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+img.greenmushroom {
+        
+    display: block;
+    margin-right: 10px;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.darkyellow {
+    background-color: #FFDA09;
+    height: 16vh;
+    /*font-size: 50px;*/
+}
+
+.reddish {
+    background-color: #EB1F22;
+    height: 40vh;
+}
+
+.white {
+    background-color: #FFFFFF;
+    height: 30vh;
+}
+
+.green {
+    background-color: #8DC63F;
+    height: 10vh;
+}
+
+.orange {
+    background-color: #E76E34;
+    height: 10vh;
+}
