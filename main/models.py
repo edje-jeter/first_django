@@ -19,6 +19,11 @@ class StateCapital(models.Model):
 class State(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
     abbrev = models.CharField(max_length=255, null=True, blank=True)
+    pop = models.CharField(max_length=255, null=True, blank=True)
+    state_map = models.ImageField(upload_to='state_map', null=True, blank=True)
+    state_flag = models.ImageField(upload_to='state_flag', null=True, blank=True)
+    admit = models.CharField(max_length=255, null=True, blank=True)
+    rank = models.CharField(max_length=255, null=True, blank=True)
 
     def __unicode__(self):
         return self.name

@@ -19,11 +19,33 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                    <p>State:
+                        <strong>{{ state.name }}</strong>
+                    </p>
+                    <p>Admit Date:
+                        <strong>{{ state.admit }}</strong>
+                    </p>
+                    <p>Order of Admission:
+                        <strong>{{ state.rank }}</strong>
+                    </p>
+                    <p>State Population:
+                        <strong>{{ state.pop| intcomma }}</strong>
+                    </p>
                     <p>Capital:
                         <strong>{{ state.statecapital }}</strong>
                     </p>
                     <p>Capital Population:
                         <strong>{{ state.statecapital.pop| intcomma }}</strong>
+                    </p>
+                    <p>
+                        <img class="col-md-10"
+                             src="{{ state.state_map.url }}"
+                             alt="testing">
+                    </p>
+                    <p>
+                        <img class="col-md-10"
+                             src="{{ state.state_flag.url }}"
+                             alt="testing">
                     </p>
                 </div>
                 <div class="clearfix"></div>
